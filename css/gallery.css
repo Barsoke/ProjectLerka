@@ -1,0 +1,536 @@
+
+:root {
+    --primary-color: rgba(146, 251, 98, 0.85); /* Основной акцентный цвет (#92fb62d9) */
+    --secondary-color: #15b72b; /* Вторичный темный цвет (#15b72b) */
+    --text-color: #333; /* Основной цвет текста */
+    --light-bg-color: #f8f8f8; /* Очень светлый фон */
+    --dark-bg-color: #2c3e50; /* Темный фон для футера (как в services.css/contact.css) */
+    --great-vibes-font: 'Great Vibes', cursive; /* Декоративный шрифт */
+    --poppins-font: 'Poppins', sans-serif; /* Шрифт для заголовков */
+    --open-sans-font: 'Open Sans', sans-serif; /* Шрифт для основного текста */
+}
+
+/* Общие стили и сброс базовых настроек браузера */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Устанавливает основной шрифт для текста на странице, с резервным шрифтом sans-serif */
+    line-height: 1.6; /* Устанавливает высоту строки для лучшей читаемости текста */
+    color: #ffffff; /* Устанавливает основной цвет текста на темно-серый */
+    background-color: #f8f8f8; /* Устанавливает очень светлый серый фон для всей страницы */
+    overflow-x: hidden; /* Запрещает горизонтальную прокрутку, предотвращая появление горизонтальной полосы прокрутки */
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: inherit; /* Ссылки наследуют цвет текста от своего родительского элемента */
+}
+
+ul {
+    list-style: none; /* Убирает стандартные маркеры (точки) у элементов списка */
+}
+
+.container {
+    max-width: 1200px; /* Устанавливает максимальную ширину контейнера */
+    margin: 0 auto; /* Выравнивает контейнер по центру страницы горизонтально */
+    padding: 0 20px; /* Добавляет внутренние отступы слева и справа по 20px, чтобы контент не прилипал к краям экрана */
+}
+
+/* Стили для секций, которым нужен вертикальный отступ */
+.section-padding {
+    padding: 80px 0; /* Добавляет внутренний отступ сверху и снизу по 80px для визуального разделения секций */
+}
+
+/* Стилизация заголовков h1, h2, h3 */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif; /* Устанавливает шрифт Poppins для всех заголовков */
+    color: #2c3e50; /* Устанавливает темно-синий/серый цвет для заголовков */
+    margin-bottom: 20px; /* Добавляет нижний внешний отступ под заголовками */
+}
+
+/* Стилизация заголовка h1 */
+h1 {
+    font-size: 3.2em; /* Устанавливает размер шрифта для h1 (относительно базового шрифта body) */
+    font-weight: 700; /* Устанавливает жирность шрифта для h1 */
+}
+
+/* Стилизация заголовка h2 */
+h2 {
+    font-size: 2.5em; /* Устанавливает размер шрифта для h2 */
+    font-weight: 600; /* Устанавливает жирность шрифта для h2 */
+    margin-bottom: 25px; /* Добавляет немного больший нижний отступ для h2 */
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #666;
+}
+
+
+/* HEADER Стили - Шапка сайта */
+.main-header {
+    background-color: #000000; /*  фон для шапки */
+    padding: 15px 0; /* Внутренние отступы сверху и снизу для шапки */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Легкая тень под шапкой для эффекта "подъема" */
+    position: sticky; /* Делает шапку "липкой" - она прилипает к верху при прокрутке */
+    top: 0; /* Прилипает к верху (0px от верхнего края) */
+    z-index: 1000; /* Устанавливает высокий z-index, чтобы шапка была поверх других элементов при прокрутке */
+}
+
+/* Стилизация контейнера внутри шапки */
+.main-header .container {
+    display: flex; /* Использует Flexbox для выравнивания элементов внутри контейнера */
+    justify-content: space-between; /* Распределяет элементы равномерно, первый в начале, последний в конце */
+    align-items: center; /* Выравнивает элементы по центру по вертикали */
+}
+
+/* Стилизация изображения логотипа внутри ссылки */
+.logo img {
+    height: 80px; /* Устанавливает фиксированную высоту логотипа */
+    width: auto; /* Ширина подстраивается автоматически, сохраняя пропорции */
+    display: block; /* Отображает изображение как блочный элемент */
+}
+
+/* Стилизация навигационного меню */
+.main-nav ul {
+    display: flex; /* Использует Flexbox для горизонтального расположения пунктов меню */
+}
+
+/* Стилизация каждого элемента списка в навигации */
+.main-nav ul li {
+    position: relative; /* Устанавливает относительное позиционирование для позиционирования псевдоэлементов */
+}
+
+/* Добавляет разделитель (вертикальную черту) после каждого пункта меню, кроме последнего */
+.main-nav ul li:not(:last-child)::after {
+    content: '|'; /* Содержимое псевдоэлемента - символ вертикальной черты */
+    color: #d2d2d2; /* Цвет разделителя */
+    margin: 0 15px; /* Отступы для разделителя справа и слева */
+    display: inline-block; /* Отображает разделитель как строчно-блочный элемент */
+    font-weight: normal; /* Обычная толщина шрифта для разделителя */
+}
+
+/* Стилизация ссылок внутри навигационного меню */
+.main-nav ul li a {
+    color: #d2d2d2; /* цвет текста ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+    padding: 5px 0; /* Внутренние вертикальные отступы для ссылок */
+    position: relative; /* Относительное позиционирование для анимированного подчеркивания */
+}
+
+/* Анимированное подчеркивание для ссылок */
+.main-nav ul li a::after {
+    content: ''; /* Пустое содержимое для создания подчеркивания */
+    position: absolute; /* Абсолютное позиционирование относительно родительского элемента (ссылки) */
+    left: 0; /* Располагается слева */
+    bottom: 0; /* Располагается снизу */
+    width: 0; /* Начальная ширина подчеркивания - 0 */
+    height: 2px; /* Высота подчеркивания */
+    background-color: #92fb62d9; /* Акцентный цвет подчеркивания */
+    transition: width 0.3s ease; /* Плавный переход ширины при наведении */
+}
+
+/* Состояние подчеркивания при наведении или для активной ссылки */
+.main-nav ul li a:hover::after, /* При наведении на ссылку */
+.main-nav ul li a.active::after { /* Для активной ссылки (с классом 'active') */
+    width: 100%; /* Ширина подчеркивания становится 100% */
+}
+
+/* Состояние цвета текста ссылки при наведении или для активной ссылки */
+.main-nav ul li a:hover, /* При наведении на ссылку */
+.main-nav ul li a.active { /* Для активной ссылки */
+    color: #92fb62d9; /* Цвет текста ссылки становится акцентным */
+}
+
+/* Стили для основной кнопки "Записаться" в хедере */
+.btn-primary {
+    display: inline-block; /* Отображается как строчно-блочный элемент */
+    background-color: #92fb62d9; /* Акцентный цвет фона кнопки */
+    color: #000000; /* Белый цвет текста кнопки */
+    padding: 12px 25px; /* Внутренние отступы для кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
+    font-weight: 600; /* Полужирный шрифт */
+    font-size: 1em; /* Размер шрифта, наследует от родителя */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные переходы для цвета фона и трансформации */
+    text-align: center; /* Выравнивание текста по центру */
+    border: none; /* Убирает границу кнопки */
+    cursor: pointer; /* Курсор меняется на указатель при наведении */
+}
+
+/* Эффект наведения на основную кнопку */
+.btn-primary:hover {
+    background-color: #15b72b; /* Цвет фона становится темнее при наведении */
+    transform: translateY(-2px); /* Кнопка слегка поднимается вверх */
+}
+
+
+/* HERO Секция на странице услуг - большой баннер */
+.page-hero {
+    /* Градиентное наложение на фоновое изображение для лучшей читаемости текста */
+    background: linear-gradient(rgba(107, 251, 71, 0.573), rgba(139, 250, 84, 0.726)),
+                url('img/hero_bg.jpg') no-repeat center center/cover; /* Фоновое изображение, без повтора, по центру, растянутое на всю область */
+    color: #000000; /* Белый цвет текста на баннере */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 100px 20px; /* Внутренние отступы сверху/снизу и по бокам */
+    margin-bottom: 40px; /* Нижний отступ под баннером */
+    display: flex; /* Использует Flexbox для центрирования содержимого */
+    align-items: center; /* Выравнивание содержимого по центру по вертикали */
+    justify-content: center; /* Выравнивание содержимого по центру по горизонтали */
+    min-height: 100px; /* Минимальная высота баннера */
+}
+
+/* Стилизация заголовка внутри Hero секции */
+.page-hero h1 {
+    color: #3f3f3f; /* Белый цвет заголовка */
+    font-size: 3.5em; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Нижний отступ */
+}
+
+/* Стилизация параграфа внутри Hero секции */
+.page-hero p {
+    font-size: 1.2em; /* Размер шрифта параграфа */
+    max-width: 700px; /* Максимальная ширина текста */
+    margin: 0 auto; /* Выравнивание текста по центру */
+}
+/* Стили для основной секции галереи */
+#gallery-main h2, #gallery-main .gallery-description {
+    text-align: center;
+    margin-bottom: 15px;
+}
+#gallery-main .gallery-description {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Стили для сетки галереи */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding-top: 20px;
+}
+
+/* Стили для каждого элемента галереи */
+.gallery-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Стили для оверлея (название и мастер) */
+.item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: #fff;
+    padding: 20px 15px 10px 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover .item-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.item-overlay h3 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.item-overlay p {
+    font-size: 0.9em;
+    color: #eee;
+    margin-bottom: 0;
+}
+
+/* --- Стили для лайтбокса --- */
+#lightbox-overlay {
+    position: fixed; /* Закрепляет лайтбокс на экране, игнорируя прокрутку */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Полупрозрачный черный фон */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    z-index: 9999; /* Очень высокий z-index, чтобы лайтбокс был поверх всего */
+    opacity: 0; /* Изначально лайтбокс полностью прозрачный */
+    visibility: hidden; /* Изначально лайтбокс не виден и не реагирует на события мыши */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Плавный переход при появлении/исчезновении */
+}
+
+/* Класс, который добавляется JavaScript'ом, чтобы показать лайтбокс */
+#lightbox-overlay.active {
+    opacity: 1; /* Делает лайтбокс видимым */
+    visibility: visible; /* Делает лайтбокс интерактивным */
+}
+
+/* Кнопка закрытия лайтбокса */
+.lightbox-close {
+    position: fixed; /* Закрепляем кнопку в углу экрана */
+    top: 20px;
+    right: 30px;
+    font-size: 3.5em; /* Большой размер для удобства */
+    color: #fff; /* Белый цвет */
+    cursor: pointer; /* Курсор-указатель */
+    z-index: 10000; /* Выше лайтбокса */
+    text-shadow: 0 0 5px rgba(0,0,0,0.5); /* Небольшая тень для лучшей видимости на любом фоне */
+    transition: color 0.2s ease; /* Плавный переход цвета при наведении */
+}
+
+.lightbox-close:hover {
+    color: var(--primary-color); /* Меняет цвет на акцентный при наведении */
+}
+
+/* Контейнер для изображения и подписи внутри лайтбокса */
+.lightbox-content {
+    background-color: #fff; /* Белый фон для контент-блока */
+    padding: 15px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень для выделения */
+    max-width: 90%; /* Максимальная ширина контент-блока */
+    max-height: 90vh; /* Максимальная высота контент-блока (90% от высоты видимой области) */
+    display: flex; /* Используем flexbox для расположения изображения и подписи */
+    flex-direction: column; /* Элементы располагаются в колонку */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+}
+
+/* Стилизация самого изображения в лайтбоксе */
+#lightbox-img {
+    max-width: 100%; /* Изображение не выходит за границы контейнера */
+    max-height: calc(90vh - 80px); /* Учитываем высоту подписи и отступов, чтобы изображение поместилось */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Убирает лишние отступы, характерные для inline-блоков */
+    border-radius: 5px; /* Скругление углов изображения */
+}
+
+/* Стилизация подписи под изображением в лайтбоксе */
+.lightbox-caption {
+    margin-top: 15px; /* Отступ сверху от изображения */
+    text-align: center; /* Выравнивание текста по центру */
+    color: var(--text-color); /* Цвет текста */
+    max-width: 100%; /* Ограничивает ширину подписи */
+}
+
+.lightbox-caption h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    color: var(--dark-bg-color); /* Используем темный цвет для заголовка подписи */
+}
+
+.lightbox-caption p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+
+/* FOOTER Стили - Подвал сайта */
+.main-footer {
+    background-color: #282828; /* Темный фон для футера */
+    color: #ecf0f1; /* Светлый цвет текста в футере */
+    padding: 30px 0 30px; /* Внутренние отступы: сверху 60px, снизу 30px */
+    font-size: 0.90em; /* Немного уменьшенный размер шрифта */
+}
+
+/* Стилизация колонок в футере */
+.main-footer .footer-columns {
+    display: grid; /* Использует Grid-раскладку для создания колонок */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Создает автоматически подстраивающиеся колонки, каждая минимум 220px шириной */
+    gap: 20px; /* Расстояние между колонками */
+    margin-bottom: 20px; /* Нижний отступ под блоком колонок */
+}
+
+/* Стилизация заголовков колонок футера */
+.footer-col h3 {
+    color: #ecf0f1; /* Светлый цвет заголовков */
+    margin-bottom: 15px; /* Нижний отступ */
+    font-size: 1.3em; /* Размер шрифта заголовков */
+}
+
+/* Стилизация параграфов в футере */
+.footer-col p {
+    margin-bottom: 8px; /* Нижний отступ между параграфами */
+}
+
+/* Стилизация ссылок в футере */
+.footer-col a {
+    color: #ffffff; /* Серый цвет ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+/* Стилизация ссылки на соцсеть */
+.footer-col a.social-link {
+    display: inline-block; /* Отображает как строчно-блочный элемент */
+    margin-top: 5px; /* Верхний отступ */
+    padding: 5px 0; /* Вертикальные внутренние отступы */
+    font-weight: 600; /* Полужирный шрифт */
+}
+
+/* Эффект наведения на ссылки в футере */
+.footer-col a:hover {
+    color: #92fb62d9; /* Цвет ссылок становится акцентным при наведении */
+}
+
+/* Стилизация блока копирайта в футере */
+.main-footer .copyright {
+    text-align: center; /* Выравнивание текста по центру */
+    padding-top: 25px; /* Верхний внутренний отступ */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая белая граница сверху с прозрачностью */
+    color: #7f8c8d; /* Серый цвет текста копирайта */
+}
+
+
+.main-footer .copyright {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #7f8c8d;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    /* Для шапки */
+    .main-nav ul li:not(:last-child)::after {
+        content: none;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Для галереи, если нужно уменьшить колонки */
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Для шапки */
+    .main-header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .main-nav {
+        margin-top: 10px;
+    }
+
+    /* Для Hero секции */
+    .page-hero.gallery-hero {
+        padding: 80px 20px;
+        min-height: 250px;
+    }
+
+    .page-hero.gallery-hero h1 {
+        font-size: 2.8em;
+    }
+
+    .page-hero.gallery-hero p {
+        font-size: 1.05em;
+    }
+
+    /* Для секций */
+    .section-padding {
+        padding: 50px 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    /* Для галереи - одна колонка на очень маленьких экранах */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Для футера */
+    .main-footer .footer-columns {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Лайтбокс на мобильных */
+    .lightbox-close {
+        top: 10px; /* Уменьшаем отступ кнопки закрытия */
+        right: 15px;
+        font-size: 2.5em;
+    }
+    .lightbox-content {
+        max-width: 95%; /* Увеличиваем ширину на мобильных */
+        max-height: 95vh; /* Увеличиваем высоту на мобильных */
+    }
+    #lightbox-img {
+        max-height: calc(95vh - 80px); /* Адаптация под высоту */
+    }
+    .lightbox-caption h3 {
+        font-size: 1.2em;
+    }
+    .lightbox-caption p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .page-hero.gallery-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .page-hero.gallery-hero p {
+        font-size: 0.95em;
+    }
+
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}

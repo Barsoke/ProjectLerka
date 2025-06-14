@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия красоты "Кудряшка" - Главная страница</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+    <!-- Google Fonts для красивого шрифта -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+</body>
+</html>
+
+<body>
+    <!-- HEADER - Шапка сайта (Едина для всех страниц) -->
+  <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип Студии Кудряшка">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="btn-primary header-btn">Записаться</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT - Основное содержимое главной страницы -->
+    <main>
+        <div class="container">
+            <div class="hero-text">
+                <h2>Ваша красота —</h2>
+                <h2 class="hero-title-second">наше искусство</h2>
+                <p>Откройте для себя мир совершенства и ухода в Студии Красоты <span>"Кудряшка" </span></p>
+                <a class="btn hero-btn" href="booking.html">Записаться</a>
+            </div>
+            <img src="img/main-sect.jpg" alt="img">
+        </div>
+    </main>
+
+
+
+<section class="carousel-section">
+    <h2>Наши работы</h2>
+    <div class="carousel-container">
+        <div class="carousel-slider">
+            <img src="img/gallery_1.JPG" alt="Маникюр 1">
+            <img src="img/gallery_2.jpg" alt="Маникюр 2">
+            <img src="img/gallery_3.jpg" alt="Маникюр 3">
+            <img src="img/gallery_4.jpg" alt="Маникюр 4">
+            <img src="img/gallery_5.jpg" alt="Маникюр 5">
+            <img src="img/gallery_6.jpg" alt="Волосы 1">
+            <img src="img/gallery_7.jpg" alt="Ресницы 1">
+            <img src="img/gallery_8.jpg" alt="Ресницы 2">
+        </div>
+
+        <button class="carousel-button prev">&lt;</button>
+        <button class="carousel-button next">&gt;</button>
+
+        <div class="carousel-dots">
+
+        </div>
+    </div>
+</section>
+    <main>
+<section id="about" class="section-padding">
+    <div class="container1">
+        <h2>Наш подход к красоте</h2>
+        <div class="about-content">
+            <p>
+                Студия "Кудряшка" — это место, где каждый клиент чувствует себя особенным.
+                Мы предлагаем широкий спектр услуг, от классического маникюра до инновационных процедур по уходу за волосами,
+                используя только профессиональные косметические средства и современное оборудование.
+                Наши высококвалифицированные мастера постоянно совершенствуют свои навыки, чтобы предложить вам лучшее.
+            </p>
+
+            <!-- Ссылка ведет на отдельную страницу "О нас" -->
+            <a href="about.html" class="link-more">Узнать больше о нас &rarr;</a>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<!-- Popular Services Section -->
+<section id="popular-services" class="section-padding bg-light">
+    <div class="container2">
+        <h2>Популярные услуги студии</h2>
+
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="img/manicure_thumb.jpg" alt="Маникюр">
+                <h3>Маникюр</h3>
+                <p>Идеальный уход за вашими руками.</p>
+                <!-- Ссылки ведут на конкретные разделы на странице услуг (по якорям) -->
+                <a href="services.html#manicure" class="link-item">Подробнее</a>
+            </div>
+        
+            <div class="service-card">
+                <img src="img/pedi.jpg" alt="Педикюр">
+                <h3>Педикюр</h3>
+                <p>Ощутите легкость и совершенство в каждом шаге.</p>
+                <a href="services.html#pedi" class="link-item">Подробнее</a> <!-- ДОБАВЛЕН ЗАКРЫВАЮЩИЙ ТЕГ </a> -->
+            </div>
+
+             <div class="service-card">
+                <img src="img/volo.jpg" alt="Парикмахерские услуги">
+                <h3>Парикмахерские услуги</h3>
+                <p>Создайте свой неповторимый образ.</p>
+                <a href="services.html#hair" class="link-item">Подробнее</a> <!-- ДОБАВЛЕН ЗАКРЫВАЮЩИЙ ТЕГ </a> -->
+            </div>
+
+             <div class="service-card">
+                <img src="img/lash_thumb.jpg" alt="Услуги наращивание и ламинирование ресниц">
+                <h3>Наращивание/Ламинирование ресниц. Оформление бровей</h3>
+                <p>Создайте свой неповторимый и выразительный взгляд.</p>
+                <a href="services.html#lash" class="link-item">Подробнее</a> <!-- ДОБАВЛЕН ЗАКРЫВАЮЩИЙ ТЕГ </a> -->
+            </div>
+           
+        </div> <!-- ДОБАВЛЕН ЗАКРЫВАЮЩИЙ ТЕГ </div> для service-grid -->
+
+        <div class="text-center">
+            <!-- Кнопка ведет на общую страницу услуг -->
+            <a href="services.html" class="btn-secondary mt-40">Посмотреть все услуги</a>
+        </div>
+    </div>
+</section>
+
+
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Самое время преобразиться</h2>
+
+                <p>Позвольте себе сиять: запишитесь на процедуру уже сегодня!"</p>
+                <!-- Кнопка ведет на страницу бронирования -->
+                <a href="booking.html" class="btn-primary">Записаться онлайн</a>
+            </div>
+        </section>
+    </main>
+
+ <!-- FOOTER - Подвал сайта (Един для всех страниц) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Студия "Кудряшка"</h3>
+                    <p>Мы работаем, чтобы вы сияли!</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p>Адрес: г. Кохма, ул.Машиностроительная, 12</p>
+                    <p>Телефон: +7 (930) 347-59-67</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 09:00–19:00</p>
+                    <p>Сб-Вс: 09:00–17:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="https://vk.com/kydristudio?from=groups" target="_blank" class="social-link">Вконтакте</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Студия Красоты "Кудряшка". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

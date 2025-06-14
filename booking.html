@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты и Запись - Студия Красоты "Кудряшка"</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Подключение Google Fonts: Poppins (для заголовков), Open Sans (для основного текста) и Great Vibes (для декоративного текста) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER - Шапка сайта (Едина для всех страниц) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип Студии Кудряшка">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="btn-primary header-btn">Записаться</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT - Основное содержимое страницы контактов -->
+    <main>
+        <section class="page-hero contact-hero">
+            <div class="container">
+                <h1>Свяжитесь с нами</h1>
+                <p>Мы всегда рады ответить на ваши вопросы и записать вас на процедуру!</p>
+            </div>
+        </section>
+
+        <section id="booking-form" class="section-padding">
+            <div class="container">
+                <h2>Онлайн-запись</h2>
+                <p class="section-description">Заполните форму ниже, чтобы записаться на удобное для вас время и услугу. Мы свяжемся с вами для подтверждения.</p>
+
+                <form class="booking-form-grid" id="onlineBookingForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Номер телефона:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,12}" placeholder="+7 (XXX) XXX-XX-XX" required>
+                        <small>Например: +79123456789</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail (необязательно):</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Выберите дату:</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Выберите время:</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Выберите услугу:</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Выберите услугу --</option>
+                            <option value="Стрижка женская">Стрижка женская</option>
+                            <option value="Стрижка мужская">Стрижка мужская</option>
+                            <option value="Окрашивание волос">Окрашивание волос</option>
+                            <option value="Укладка/Прическа">Укладка/Прическа</option>
+                            <option value="Маникюр">Маникюр</option>
+                            <option value="Педикюр">Педикюр</option>
+                            <option value="Наращивание ногтей">Наращивание ногтей</option>
+                            <option value="Косметология">Косметология</option>
+                            <option value="Массаж">Массаж</option>
+                            <option value="Уход за бровями">Уход за бровями</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="comments">Комментарии (необязательно):</label>
+                        <textarea id="comments" name="comments" rows="5"></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-primary">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact-info" class="section-padding light-bg">
+            <div class="container">
+                <h2>Наши контакты</h2>
+                <div class="contact-details-grid">
+                    <div class="contact-item">
+                        <h3>Адрес</h3>
+                        <p>г. Кохма, ул.Машиностроительная, 12</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+79303475967">+7 (930) 347-59-67</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:info@kudryashka.ru">info@kudryashka.ru</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Часы работы</h3>
+                        <p>Пн-Пт: 09:00–19:00</p>
+                        <p>Сб-Вс: 09:00–17:00</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Мы в соцсетях</h3>
+                        <p><a href="https://vk.com/kydristudio?from=groups" target="_blank" class="social-link">Вконтакте</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location-map">
+            <div class="container">
+                <h2>Мы на карте</h2>
+                <!-- Вставьте код карты здесь. Пример для Google Maps: -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2432.2227161726084!2d41.0152655!3d56.9740263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414b2d56e2978a63%3A0x6b7a8d5c3d4f1c99!2z0YPQu9C40YbQsNC70YzQvdGD0YDRgdGL0Lkg0L_RgNC-0YHQvNC-0L3RgdC-0LrQsNC30YDQuNGFINC00LXRhtC40YLQtdGA0YHRgtCw0L3QsCAxMiwg0JrQsNC90LLQsNGG0LA!5e0!3m2!1sru!2sru!4v1718047910940!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER - Подвал сайта (Един для всех страниц) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Студия "Кудряшка"</h3>
+                    <p>Мы работаем, чтобы вы сияли!</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p>Адрес: г. Кохма, ул.Машиностроительная, 12</p>
+                    <p>Телефон: +7 (930) 347-59-67</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 09:00–19:00</p>
+                    <p>Сб-Вс: 09:00–17:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="https://vk.com/kydristudio?from=groups" target="_blank" class="social-link">Вконтакте</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Студия Красоты "Кудряшка". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для подтверждения записи -->
+    <div id="thankYouModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Спасибо за использование онлайн-записи!</h2>
+            <p>В течение дня с вами свяжутся для уточнения и подтверждения записи.</p>
+            <button class="btn-primary" id="modalOkButton">Понятно</button>
+        </div>
+    </div>
+
+    <!-- Подключение JavaScript-файла -->
+    <script src="js/contact.js"></script>
+</body>
+</html>

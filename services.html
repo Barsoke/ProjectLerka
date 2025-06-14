@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши Услуги - Студия Красоты "Кудряшка"</title>
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Подключение Google Fonts: Poppins (для заголовков) и Open Sans (для основного текста) -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER - Шапка сайта (Едина для всех страниц) -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Логотип Студии Кудряшка">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="services.html" class="active">Услуги</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a href="booking.html" class="btn-primary header-btn">Записаться</a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT - Основное содержимое страницы услуг -->
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Полный перечень наших услуг</h1>
+                <p>Откройте для себя идеальный уход для волос, ресниц и ногтей.</p>
+            </div>
+        </section>
+
+        <!-- Раздел "Маникюр и педикюр" -->
+        <section id="manicure" class="service-detail section-padding">
+            <div class="container">
+                <img src="img/PriceMA.jpg" alt="Маникюр">
+                <div class="service-info">
+                    <h2>Маникюр</h2>
+                    <p>Наш мастер предложит вам полный спектр услуг по уходу за ногтями и спа-процедуры для. Мы используем только стерильные инструменты и высококачественные материалы.</p>
+                    <ul>
+                        <li>Гигиенический маникюр - от 700 ₽</li>
+                        <li>Гель-лак - от 2000 ₽</li>
+                        <li>Наращивание ногтей - от 2500 ₽</li>
+                    </ul>
+                    <p><br> *Актуальные цены уточнять при записи*</p> 
+                    <a href="booking.html?service=manicure" class="btn-secondary">Записаться на маникюр</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Парикмахерские услуги" -->
+        <section id="hair" class="service-detail section-padding reverse-layout">
+            <div class="container">
+                <div class="service-info">
+                    <h2>Парикмахерские услуги</h2>
+                    <p>Изменение образа, стрижки, окрашивание любой сложности (омбре, балаяж, мелирование), укладки для любого события, восстанавливающие процедуры и наращивание волос. Мы поможем подобрать идеальный стиль, который подчеркнет вашу индивидуальность.</p>
+                    <ul>
+                        <li>Женская стрижка - от 500 ₽</li>
+                        <li>Окрашивание в один тон - от 2000 ₽</li>
+                        <li>Укладка - от 1000 ₽</li>
+                    </ul>
+                    <p><br> *Актуальные цены уточнять при записи*</p> 
+                    <a href="booking.html?service=hair" class="btn-secondary">Записаться на стрижку</a>
+                </div>
+                <img src="img/PriceHA.jpg" alt="Парикмахерские услуги">
+            </div>
+        </section>
+
+        <!-- Пример: Раздел "Педикюр" -->
+        <section id="pedi" class="service-detail section-padding">
+            <div class="container">
+                <img src="img/PricePE.jpg" alt="Педикюр">
+                <div class="service-info">
+                    <h2>Педикюр</h2>
+                    <p>Индивидуальный подход к каждому: процедура ухода за ногами и ногтями, которая включает очищение, обработку кожи, уход за ногтями и нанесение ухаживающих средств. Она помогает сохранить здоровье ног, улучшить их внешний вид и обеспечить комфорт.</p>
+                    <ul>
+                        <li>Обработка трещин - 500 ₽</li>
+                        <li>Педикюр с покрытием - от 2000 ₽</li>
+                        <li>Обработка онихолизиса - от 400 ₽</li>
+                    </ul>
+                    <p><br> *Актуальные цены уточнять при записи*</p> 
+                    <a href="booking.html?service=cosmetology" class="btn-secondary">Записаться на педикюр</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Пример: Раздел "Ресницы" -->
+        <section id="lash" class="service-detail section-padding reverse-layout">
+            <div class="container">
+                <div class="service-info">
+                    <h2>Наращивание/Ламинирование ресниц</h2>
+                    <p>Это процедуры для придания глазам выразительности и красоты. Наращивание увеличивает длину и объем ресниц, создавая эффект пушистых и насыщенных глаз. Ламинирование придает ресницам естественный блеск, укрепляет и делает их более густыми и изогнутыми.</p>
+                    <ul>
+                        <li>Классическое наращивание - 1100 ₽</li>
+                        <li>Наращивание 3Д - 1700 ₽</li>
+                        <li>Ламинирвание ресниц - 1000 ₽</li>
+                    </ul>
+                    <a href="booking.html?service=massage" class="btn-secondary">Записаться на ресницы</a>
+                </div>
+                <img src="img/PriceRE.jpg" alt="Ресницы">
+            </div>
+        </section>
+        <!-- Пример: Раздел "Брови" -->
+        <section id="brows" class="service-detail section-padding reverse-layout">
+            <div class="container">
+                <div class="service-info">
+                    <h2>Оформление бровей</h2>
+                    <p>Оформление бровей — это процедура коррекции формы и окрашивания бровей для подчеркнутого и гармоничного взгляда. Она помогает подчеркнуть природную красоту лица, сделать взгляд более выразительным и завершенным.</p>
+                    <ul>
+                        <li>Окрашивание бровей - от 300 ₽</li>
+                        <li>Коррекция - от 350 ₽</li>
+                        <li>Долговременная укладка - от 600 ₽</li>
+                    </ul>
+                    <a href="booking.html?service=massage" class="btn-secondary">Записаться на брови</a>
+                </div>
+                <img src="img/PriceBR.jpg" alt="Брови">
+            </div>
+        </section>
+
+    </main>
+
+   <!-- FOOTER - Подвал сайта (Един для всех страниц) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>Студия "Кудряшка"</h3>
+                    <p>Мы работаем, чтобы вы сияли!</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <p>Адрес: г. Кохма, ул.Машиностроительная, 12</p>
+                    <p>Телефон: +7 (930) 347-59-67</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 09:00–19:00</p>
+                    <p>Сб-Вс: 09:00–17:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы в соцсетях</h3>
+                    <a href="https://vk.com/kydristudio?from=groups" target="_blank" class="social-link">Вконтакте</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Студия Красоты "Кудряшка". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
